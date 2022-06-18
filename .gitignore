@@ -1,6 +1,3 @@
-# Default ignored files
-/shelf/
-/workspace.xml
 # Compiled class file
 *.class
 
@@ -12,9 +9,6 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
-# Properties files
-*.properties
 
 # Package Files #
 *.jar
@@ -43,3 +37,4 @@ target/
 .vscode
 /gradlew
 /gradlew.bat
+*.properties
