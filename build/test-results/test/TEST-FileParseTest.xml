@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FileParseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-18T11:55:21" hostname="LAPTOP-JMMD302D" time="0.806">
-  <properties/>
-  <testcase name="checkPDFTest()" classname="FileParseTest" time="0.806"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
