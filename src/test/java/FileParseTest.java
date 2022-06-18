@@ -17,7 +17,7 @@ public class FileParseTest {
 
     @Test
     void checkPDFTest() throws Exception {
-        ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("test.zip")).getFile());
+        ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("tests.zip")).getFile());
         ZipEntry entry = zipFile.getEntry("output.pdf");
         PDF pdf;
         InputStream inputStream = zipFile.getInputStream(entry);
@@ -28,7 +28,7 @@ public class FileParseTest {
 
     @Test
     void checkXLSTest() throws Exception {
-        ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("test.zip")).getFile());
+        ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("tests.zip")).getFile());
         ZipEntry entry = zipFile.getEntry("Sample.xlsx");
         XLS xls;
         InputStream inputStream = zipFile.getInputStream(entry);
@@ -38,7 +38,7 @@ public class FileParseTest {
     }
     @Test
     void checkCSVTest() throws Exception{
-        ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("test.zip")).getFile());
+        ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("tests.zip")).getFile());
         ZipEntry entry = zipFile.getEntry("file.csv");
         List<String[]> list;
         InputStream inputStream =zipFile.getInputStream(entry);
