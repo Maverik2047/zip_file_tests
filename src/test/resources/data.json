@@ -1,0 +1,16 @@
+{
+  "pid" : 1047,
+  "type": "employee",
+  "job_type": "contract",
+  "position": "Chief",
+  "experience": "5 years",
+  "salary": 3500,
+  "name": "John",
+  "surname": "Sullivan",
+  "isGoodMaster": true,
+  "id":{
+  "number": 2334,
+    "issuedBy": "SFV Motor"
+}
+
+}

@@ -1,7 +1,9 @@
 import com.codeborne.pdftest.PDF;
 import com.codeborne.xlstest.XLS;
 import com.opencsv.CSVReader;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.json.Json;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -16,6 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class FileParseTest {
     ClassLoader classLoader = FileParseTest.class.getClassLoader();
 
+@DisplayName("PDF in Zip test")
     @Test
     void checkPDFTest() throws Exception {
         ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("test.zip")).getFile());
@@ -26,7 +29,7 @@ public class FileParseTest {
         assertThat(pdf.text).contains("PDF Example");
 
     }
-
+    @DisplayName("XLS in Zip test")
     @Test
     void checkXLSTest() throws Exception {
         ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("test.zip")).getFile());
@@ -37,7 +40,7 @@ public class FileParseTest {
         assertThat(xls.excel.getSheetAt(0).getRow(0).getCell(1).getStringCellValue())
                 .contains("test");
     }
-
+    @DisplayName("CSV in Zip test")
     @Test
     void checkCSVTest() throws Exception {
         ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("test.zip")).getFile());
@@ -51,10 +54,6 @@ public class FileParseTest {
 
     }
 
-    @Test
-    void jsonTest() throws Exception {
-
-    }
 }
 
 
