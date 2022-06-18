@@ -10,7 +10,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class JsonTest {
     ClassLoader classLoader = JsonTest.class.getClassLoader();
-   @DisplayName("json with Jackson library test")
+
+    @DisplayName("json with Jackson library test")
     @Test
     void jsonTest() throws Exception {
         InputStream inputStream = classLoader.getResourceAsStream("data.json");
